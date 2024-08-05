@@ -134,6 +134,10 @@ void Copter::tuning()
     case TUNING_RATE_YAW_FF:
         attitude_control->get_rate_yaw_pid().ff(tuning_value);
         break;
+
+    case TUNING_ATC_HOVR_ROL_TRM:
+        attitude_control->get_roll_trim_cd(tuning_value);
+        break;
 #endif
 
     case TUNING_DECLINATION:
